@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="phone"
+            type="String" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.endpoint.giveme.activities_fragments.activity_verification_code.VerificationCodeActivity">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/color4"
+            android:textSize="18sp"
+            android:text="@string/code_verification"
+            />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv1"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/color4"
+            android:textSize="15sp"
+            android:text="@string/enter_code_sent_to"
+            />
+
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv2"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:text="@{phone}"
+            />
+
+        <com.chaos.view.PinView
+            android:id="@+id/edtCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPhone"
+            android:layout_marginTop="50dp"
+            app:viewType="rectangle"
+            app:itemWidth="40dp"
+            app:itemCount="6"
+            app:itemHeight="40dp"
+            app:itemRadius="8dp"
+            app:itemSpacing="5dp"
+            app:cursorColor="@color/colorPrimary"
+            app:hideLineWhenFilled="true"
+            app:lineColor="@color/transparent"
+            app:lineWidth="0dp"
+            android:inputType="number"
+            android:textSize="15sp"
+            app:cursorWidth="2dp"
+            android:cursorVisible="true"
+            style="@style/PinWidget.PinView"
+            android:itemBackground="@drawable/item_pinview"
+            />
+
+
+        <Button
+            android:id="@+id/btnResendCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray6"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtCode"
+            android:layout_marginTop="50dp"
+            app:layout_constraintBottom_toTopOf="@id/btnConfirm"
+            app:layout_constraintVertical_bias="0"
+            android:background="@color/white"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textAllCaps="false"
+            />
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/small_rounded_primary"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="@string/confirm"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

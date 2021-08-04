@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "926659682565",
+    "firebase_url": "https://endpoint-9acfb.firebaseio.com",
+    "project_id": "endpoint-9acfb",
+    "storage_bucket": "endpoint-9acfb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:926659682565:android:68db911d673f038a72976c",
+        "android_client_info": {
+          "package_name": "com.endpoint.giveme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "926659682565-g79tapfe3g2hqp9juh0c7gjk7t62r4m0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.endpoint.giveme",
+            "certificate_hash": "554eebb2d2756bf34aa3ed972b45440efb7eae32"
+          }
+        },
+        {
+          "client_id": "926659682565-k4dqp4me4qfvk3va9g58cb97vhhvfb83.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQG0NbUo9UO_eXBsD03ZudUgj73fE75lE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "926659682565-k4dqp4me4qfvk3va9g58cb97vhhvfb83.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="com.endpoint.giveme.models.NearbyModel.Result" />
+        <variable
+            name="currency"
+            type="String" />
+        <import type="android.view.View"/>
+
+
+    </data>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentPadding="8dp"
+        app:cardElevation="1dp"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_margin="8dp"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:civ_border_width="0dp"
+                placeStoreImage="@{model}"
+                />
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/color4"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="@{model.name}"
+                />
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                app:layout_constraintStart_toStartOf="@id/tvName"
+                app:layout_constraintTop_toBottomOf="@id/tvName"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_marker"
+                android:tint="@color/color4"
+                android:padding="2dp"
+                
+                />
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/icon"
+                app:layout_constraintBottom_toBottomOf="@id/icon"
+                app:layout_constraintStart_toEndOf="@id/icon"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/color4"
+                android:textSize="13sp"
+                distance="@{model.distance}"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/icon"
+                app:layout_constraintTop_toBottomOf="@id/icon"
+                android:background="@drawable/rounded_rose"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textSize="8sp"
+                tools:ignore="SmallSp"
+                android:textColor="@color/white"
+                android:text='@{model.customPlaceModel!=null?(model.customPlaceModel.delivery_offer!=null?(model.customPlaceModel.delivery_offer.offer_type.equals("per")?@string/discount+" "+model.customPlaceModel.delivery_offer.offer_value+"%":@string/discount+" "+model.customPlaceModel.delivery_offer.offer_value+" "+currency):""):""}'
+                android:visibility="@{model.customPlaceModel==null?View.GONE:(model.customPlaceModel.delivery_offer==null?View.GONE:View.VISIBLE),default=gone}"
+                android:layout_marginTop="8dp"
+
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

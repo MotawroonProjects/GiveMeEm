@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#FF8B5C</color>
+    <color name="colorPrimaryDark">#FF8B5C</color>
+    <color name="colorAccent">#FF8B5C</color>
+
+    <color name="color1">#FF8B5C</color>
+    <color name="color2">#FF8B5C</color>
+    <color name="color3">#334d51</color>
+    <color name="color4">#2e3233</color>
+    <color name="color_primary_trans">#bb0E9A82</color>
+    <color name="color_primary_trans2">#220E9A82</color>
+
+    <color name="white">#fff</color>
+    <color name="black">#000000</color>
+    <color name="gray0">#fafafa</color>
+    <color name="gray1">#f5f5f5</color>
+    <color name="gray2">#eee</color>
+    <color name="gray3">#e0e0e0</color>
+    <color name="gray4">#bababa</color>
+    <color name="gray5">#c3c3c3</color>
+    <color name="gray6">#a0a0a0</color>
+    <color name="gray8">#b0afbb</color>
+    <color name="gray9">#757575</color>
+    <color name="gray10">#f2f2f2</color>
+    <color name="gray11">#5f6366</color>
+    <color name="gray12">#969fa4</color>
+    <color name="gray12_trans">#55969fa4</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="color_red">#ef0607</color>
+    <color name="color_red_trans">#55ef0607</color>
+
+    <color name="color_blue">#0000ff</color>
+    <color name="trans_black">#55000000</color>
+    <color name="trans_black2">#bb000000</color>
+    <color name="color_rose">#ef676b</color>
+    <color name="product_trans">#88000000</color>
+
+    <color name="gray1_trans">#ddf5f5f5</color>
+    <color name="rate_color">#FFD800</color>
+    <color name="yellow">#FBC02D</color>
+    <color name="primary_trans">#111db198</color>
+    <color name="color_gray_trans">#55e0e0e0</color>
+
+
+    <array name="dots">
+        <item>@color/colorPrimary</item>
+        <item>@color/colorPrimaryDark</item>
+
+    </array>
+
+    <array name="dots2">
+        <item>@color/white</item>
+
+    </array>
+
+
+
+</resources>

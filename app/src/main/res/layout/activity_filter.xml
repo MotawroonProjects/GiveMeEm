@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="lang"
+            type="String" />
+        <variable
+            name="listener"
+            type="com.endpoint.giveme.interfaces.Listeners.BackListener" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btnApply"
+            >
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:elevation="0dp"
+                >
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    >
+
+
+                    <FrameLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@color/primary_trans"
+                            android:clickable="false"
+                            android:longClickable="false"
+                            />
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_next"
+                            android:padding="8dp"
+                            android:tint="@color/colorPrimary"
+                            android:rotation='@{lang.equals("ar")?180:0}'
+                            android:onClick="@{()->listener.back()}"
+                            />
+
+                    </FrameLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_gravity="center"
+                        android:textSize="18sp"
+                        android:text="@string/filter"
+                        />
+
+                </androidx.appcompat.widget.Toolbar>
+
+
+
+            </com.google.android.material.appbar.AppBarLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gray4"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/color4"
+                android:textSize="14sp"
+                android:text="@string/category"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gray4"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:textColor="@color/color4"
+                android:textSize="14sp"
+                android:text="@string/distance"
+                />
+            <com.warkiz.widget.IndicatorSeekBar
+                android:id="@+id/seekBarDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isb_min="1"
+                app:isb_max="60"
+                app:isb_indicator_color="@color/colorPrimary"
+                app:isb_indicator_text_color="@color/white"
+                app:isb_indicator_text_size="14sp"
+                app:isb_seek_smoothly="true"
+                app:isb_show_indicator="circular_bubble"
+                app:isb_show_thumb_text="false"
+                app:isb_show_tick_texts="false"
+                app:isb_ticks_count="0"
+                app:isb_track_background_color="@color/color_primary_trans"
+                app:isb_track_progress_color="@color/colorPrimary"
+                app:isb_track_rounded_corners="true"
+                app:isb_track_background_size="10dp"
+                app:isb_track_progress_size="10dp"
+                app:isb_thumb_size="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="10dp"
+                app:isb_progress_value_float="false"
+                app:isb_only_thumb_draggable="true"
+                app:isb_thumb_drawable="@drawable/thumb_nail_bg"
+                app:isb_thumb_adjust_auto="true"
+                app:isb_progress="60.0"
+
+
+
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                >
+                <TextView
+                    android:id="@+id/tvDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|start"
+                    android:textColor="@color/color4"
+                    android:textSize="14sp"
+                    />
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gray4"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:textColor="@color/color4"
+                android:textSize="14sp"
+                android:text="@string/rating"
+                />
+            <com.warkiz.widget.IndicatorSeekBar
+                android:id="@+id/seekBarRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isb_min="0.0"
+                app:isb_max="5.0"
+                app:isb_indicator_color="@color/colorPrimary"
+                app:isb_indicator_text_color="@color/white"
+                app:isb_indicator_text_size="14sp"
+                app:isb_seek_smoothly="true"
+                app:isb_show_indicator="circular_bubble"
+                app:isb_show_thumb_text="false"
+                app:isb_show_tick_texts="false"
+                app:isb_ticks_count="0"
+                app:isb_track_background_color="@color/color_primary_trans"
+                app:isb_track_progress_color="@color/colorPrimary"
+                app:isb_track_rounded_corners="true"
+                app:isb_track_background_size="10dp"
+                app:isb_track_progress_size="10dp"
+                app:isb_thumb_size="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="10dp"
+                app:isb_progress_value_float="true"
+                app:isb_only_thumb_draggable="true"
+                app:isb_thumb_drawable="@drawable/thumb_nail_bg"
+                app:isb_thumb_adjust_auto="true"
+
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                >
+                <TextView
+                    android:id="@+id/tvRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|start"
+                    android:textColor="@color/color4"
+                    android:textSize="14sp"
+                    />
+            </FrameLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnApply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/gray9"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="@string/apply"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
