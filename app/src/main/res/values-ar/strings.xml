@@ -227,7 +227,7 @@
     <string name="so_that_submit_offers">لكي تستطيع استقبال تنبيهات الطلبات وتقديم العروض عليها</string>
     <string name="send">إرسال</string>
     <string name="total_delivery_revenue">إجمالي رسوم التوصيل</string>
-    <string name="sar">ر.س</string>
+    <string name="sar">ج.م</string>
     <string name="discount">خصم</string>
     <string name="discount_on">على رسوم التوصيل بحد اعلى </string>
     <string name="sat">السبت</string>

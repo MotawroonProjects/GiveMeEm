@@ -102,7 +102,8 @@ public class FireBaseMessaging extends FirebaseMessagingService {
                 }
 
 
-            }else if (notification_type.equals("location")){
+            }
+            else if (notification_type.equals("location")){
                 double lat = Double.parseDouble(map.get("latitude"));
                 double lng = Double.parseDouble(map.get("longitude"));
                 FavoriteLocationModel model = new FavoriteLocationModel("","","",lat,lng);
