@@ -81,7 +81,7 @@ public class VerificationCodeActivity extends AppCompatActivity {
 
         binding.btnConfirm.setOnClickListener(v -> {
             String sms = binding.edtCode.getText().toString().trim();
-            navigateToActivityConfirmSuccess();
+           // navigateToActivityConfirmSuccess();
             if (!sms.isEmpty()) {
                 checkValidCode(sms);
             } else {
